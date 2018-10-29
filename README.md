@@ -1,0 +1,2 @@
+# libbeaches
+OSM data notes
