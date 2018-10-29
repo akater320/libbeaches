@@ -48,4 +48,6 @@ To generate a more complete coastline we'll need to include the water polygons t
 Polygons do not have winding direction. A closed way can be CW or CCW. The order and orientation of *ways* within a multipolygon *relation* should be considered random. This makes assembling polygons more complicated but somewhat simplifies editing. (More on trying to correctly edit polygons later!)  
 The only reliable way to find the interior side of a polygon is to load the location of every node and perform a ray-cast or similar. Note: there are *lots* of nodes.
 ### Reachability
-We'll consider a polygon to be reachable from another if the boundary shares at least 2 consecuitve nodes. 
+We'll consider two polygons to be adjacent if their boundaries share at least 2 consecutive nodes. A polygon is reachable from another if it is adjacent to it or if it is adjacent to a polygon that is reachable.
+## Finding the set of reachable polygons
+### Tools for working with OSM
